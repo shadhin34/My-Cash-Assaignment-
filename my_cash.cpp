@@ -2,8 +2,13 @@
 #include<windows.h>
 #define loading for(int i=0;i<4;i++){cout<<".";Sleep(400);}
 #define gdby string str="Goodbye!";for(int i=0;i<str.size();i++){cout<<str[i];Sleep(300);} 
-
+#define RESET   "\033[0m"
+#define CYAN    "\033[36m"
+#define GREEN   "\033[32m"
+#define RED     "\033[31m"
+#define YELLOW  "\033[33m"
 using namespace std;
+
 string transaction()
 {
     string trans_id="";
@@ -131,7 +136,7 @@ void Register()
     otp+=s;
    }
    
-   cout<<"\tyour otp is : "<<otp<<endl;
+   cout<<YELLOW<<"\tyour otp is : "<<otp<<RESET<<endl;
    cout<<"4 digit otp has been sent to you number, please check !\n";
    varification:
 string otp_put;
@@ -216,14 +221,14 @@ cout << "Press any key to back login...";
 
 int main()
 {
-system("cls");
+system("cls");//terminal clearance
 
 mycash m1;
 cout<<"\t*** MY Cash Login ***\n";
 bool outer_exit=false;
 while(!outer_exit)
 {
-cout<<"\t 1. Login \n \t 2. Register\n\t 3. Exit \n";
+cout<<RED<<"\t 1. Login \n \t 2. Register\n\t 3. Exit \n"<<RESET;
 cout<<"\t\t Enter your opinion : ";
 int opinion;
 cin>>opinion;
@@ -283,7 +288,7 @@ void mycash::remove_me(int idx)
     string s=to_string(digit);
     otp+=s;
    }
-   cout<<"\tyour otp is : "<<otp<<endl;
+   cout<<YELLOW<<"\tyour otp is : "<<otp<<RESET<<endl;
    cout<<"4 digit otp has been sent to you number, please check !\n";
    varification:
 string otp_put;
@@ -376,7 +381,7 @@ void mycash::send_money(int idx)
     string s=to_string(digit);
     otp+=s;
    }
-   cout<<"\tyour otp is : "<<otp<<endl;
+  cout<<YELLOW<<"\tyour otp is : "<<otp<<RESET<<endl;
    cout<<"4 digit otp has been sent to you number, please check !\n";
    varification:
 string otp_put;
@@ -432,7 +437,7 @@ void mycash::cash_out(int idx)
     string s=to_string(digit);
     otp+=s;
    }
-   cout<<"\tyour otp is : "<<otp<<endl;
+   cout<<YELLOW<<"\tyour otp is : "<<otp<<RESET<<endl;
    cout<<"4 digit otp has been sent to you number, please check !\n";
    varification:
 string otp_put;
@@ -499,7 +504,7 @@ if(tk>member[idx].amount)
     string s=to_string(digit);
     otp+=s;
    }
-   cout<<"\tyour otp is : "<<otp<<endl;
+   cout<<YELLOW<<"\tyour otp is : "<<otp<<RESET<<endl;
    cout<<"4 digit otp has been sent to you number, please check !\n";
    varification:
 string otp_put;
@@ -556,7 +561,7 @@ void mycash::change_name(int idx)
     string s=to_string(digit);
     otp+=s;
    }
-   cout<<"\tyour otp is : "<<otp<<endl;
+  cout<<YELLOW<<"\tyour otp is : "<<otp<<RESET<<endl;
    cout<<"4 digit otp has been sent to you number, please check !\n";
    varification:
 string otp_put;
@@ -608,7 +613,7 @@ void mycash::change_pin(int idx)
     string s=to_string(digit);
     otp+=s;
    }
-   cout<<"\tyour otp is : "<<otp<<endl;
+   cout<<YELLOW<<"\tyour otp is : "<<otp<<RESET<<endl;
    cout<<"4 digit otp has been sent to you number, please check !\n";
    varification:
 string otp_put;
